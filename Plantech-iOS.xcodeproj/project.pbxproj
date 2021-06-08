@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72236C3266F2B1800E8DC06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72236C2266F2B1800E8DC06 /* LoginViewController.swift */; };
+		B72236C6266F2B2300E8DC06 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72236C5266F2B2300E8DC06 /* RegisterViewController.swift */; };
 		B7AD0D54266E643D0023541F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D53266E643D0023541F /* AppDelegate.swift */; };
 		B7AD0D56266E643D0023541F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D55266E643D0023541F /* SceneDelegate.swift */; };
 		B7AD0D58266E643D0023541F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D57266E643D0023541F /* WelcomeViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B72236C2266F2B1800E8DC06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B72236C5266F2B2300E8DC06 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B7AD0D50266E643D0023541F /* Plantech-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plantech-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AD0D53266E643D0023541F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7AD0D55266E643D0023541F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				B7AD0D57266E643D0023541F /* WelcomeViewController.swift */,
+				B72236C2266F2B1800E8DC06 /* LoginViewController.swift */,
+				B72236C5266F2B2300E8DC06 /* RegisterViewController.swift */,
 				B7AD0D68266E67690023541F /* GraphViewController.swift */,
 				B7AD0D6C266E67820023541F /* OptionsTableViewController.swift */,
 			);
@@ -185,10 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72236C6266F2B2300E8DC06 /* RegisterViewController.swift in Sources */,
 				B7AD0D6D266E67820023541F /* OptionsTableViewController.swift in Sources */,
 				B7AD0D58266E643D0023541F /* WelcomeViewController.swift in Sources */,
 				B7AD0D69266E67690023541F /* GraphViewController.swift in Sources */,
 				B7D7653B266E6F8200630B1D /* CallManager.swift in Sources */,
+				B72236C3266F2B1800E8DC06 /* LoginViewController.swift in Sources */,
 				B7AD0D54266E643D0023541F /* AppDelegate.swift in Sources */,
 				B7AD0D56266E643D0023541F /* SceneDelegate.swift in Sources */,
 				B7D7653F266E703A00630B1D /* Measurement.swift in Sources */,
