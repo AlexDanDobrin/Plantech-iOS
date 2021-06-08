@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		B7AD0D54266E643D0023541F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D53266E643D0023541F /* AppDelegate.swift */; };
 		B7AD0D56266E643D0023541F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D55266E643D0023541F /* SceneDelegate.swift */; };
-		B7AD0D58266E643D0023541F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D57266E643D0023541F /* ViewController.swift */; };
+		B7AD0D58266E643D0023541F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D57266E643D0023541F /* WelcomeViewController.swift */; };
 		B7AD0D5B266E643D0023541F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD0D59266E643D0023541F /* Main.storyboard */; };
 		B7AD0D5D266E64410023541F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7AD0D5C266E64410023541F /* Assets.xcassets */; };
 		B7AD0D60266E64410023541F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD0D5E266E64410023541F /* LaunchScreen.storyboard */; };
+		B7AD0D69266E67690023541F /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D68266E67690023541F /* GraphViewController.swift */; };
+		B7AD0D6D266E67820023541F /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0D6C266E67820023541F /* OptionsTableViewController.swift */; };
+		B7AD0D70266E67A20023541F /* Options.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7AD0D6F266E67A20023541F /* Options.plist */; };
+		B7D7653B266E6F8200630B1D /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7653A266E6F8200630B1D /* CallManager.swift */; };
+		B7D7653F266E703A00630B1D /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7653E266E703A00630B1D /* Measurement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B7AD0D50266E643D0023541F /* Plantech-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plantech-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AD0D53266E643D0023541F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7AD0D55266E643D0023541F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7AD0D57266E643D0023541F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7AD0D57266E643D0023541F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B7AD0D5A266E643D0023541F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7AD0D5C266E64410023541F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7AD0D5F266E64410023541F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7AD0D61266E64410023541F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7AD0D68266E67690023541F /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		B7AD0D6C266E67820023541F /* OptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
+		B7AD0D6F266E67A20023541F /* Options.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Options.plist; sourceTree = "<group>"; };
+		B7D7653A266E6F8200630B1D /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
+		B7D7653E266E703A00630B1D /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		B7AD0D52266E643D0023541F /* Plantech-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B7AD0D53266E643D0023541F /* AppDelegate.swift */,
-				B7AD0D55266E643D0023541F /* SceneDelegate.swift */,
-				B7AD0D57266E643D0023541F /* ViewController.swift */,
-				B7AD0D59266E643D0023541F /* Main.storyboard */,
-				B7AD0D5C266E64410023541F /* Assets.xcassets */,
-				B7AD0D5E266E64410023541F /* LaunchScreen.storyboard */,
-				B7AD0D61266E64410023541F /* Info.plist */,
+				B7D76539266E6F1700630B1D /* Models */,
+				B7D76538266E6F0D00630B1D /* Views */,
+				B7D76535266E6EE200630B1D /* Controllers */,
+				B7D76536266E6EFA00630B1D /* Other */,
 			);
 			path = "Plantech-iOS";
+			sourceTree = "<group>";
+		};
+		B7D76535266E6EE200630B1D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7AD0D57266E643D0023541F /* WelcomeViewController.swift */,
+				B7AD0D68266E67690023541F /* GraphViewController.swift */,
+				B7AD0D6C266E67820023541F /* OptionsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B7D76536266E6EFA00630B1D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B7AD0D53266E643D0023541F /* AppDelegate.swift */,
+				B7AD0D55266E643D0023541F /* SceneDelegate.swift */,
+				B7AD0D5C266E64410023541F /* Assets.xcassets */,
+				B7AD0D61266E64410023541F /* Info.plist */,
+				B7AD0D6F266E67A20023541F /* Options.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B7D76538266E6F0D00630B1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7AD0D59266E643D0023541F /* Main.storyboard */,
+				B7AD0D5E266E64410023541F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7D76539266E6F1700630B1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7D7653A266E6F8200630B1D /* CallManager.swift */,
+				B7D7653E266E703A00630B1D /* Measurement.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +174,7 @@
 				B7AD0D60266E64410023541F /* LaunchScreen.storyboard in Resources */,
 				B7AD0D5D266E64410023541F /* Assets.xcassets in Resources */,
 				B7AD0D5B266E643D0023541F /* Main.storyboard in Resources */,
+				B7AD0D70266E67A20023541F /* Options.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7AD0D58266E643D0023541F /* ViewController.swift in Sources */,
+				B7AD0D6D266E67820023541F /* OptionsTableViewController.swift in Sources */,
+				B7AD0D58266E643D0023541F /* WelcomeViewController.swift in Sources */,
+				B7AD0D69266E67690023541F /* GraphViewController.swift in Sources */,
+				B7D7653B266E6F8200630B1D /* CallManager.swift in Sources */,
 				B7AD0D54266E643D0023541F /* AppDelegate.swift in Sources */,
 				B7AD0D56266E643D0023541F /* SceneDelegate.swift in Sources */,
+				B7D7653F266E703A00630B1D /* Measurement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +340,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMCM2MNH96;
-				INFOPLIST_FILE = "Plantech-iOS/Info.plist";
+				INFOPLIST_FILE = "Plantech-iOS/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMCM2MNH96;
-				INFOPLIST_FILE = "Plantech-iOS/Info.plist";
+				INFOPLIST_FILE = "Plantech-iOS/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
