@@ -9,6 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,7 +21,23 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "loginSuccess", sender: self)
+        if let password = passwordTextField.text, let username = usernameTextField.text {
+            CallManager.shared.loginUser(username: username, password: password) { [weak self] result in
+                guard let self = self else { return }
+                    
+                switch result {
+                case .success(let message):
+                    let message = message
+                    print(message)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "loginSuccess", sender: self)
+                    }
+                case .failure(let error):
+                    print(error)
+                    
+                }
+            }
+        }
     }
     
     @IBAction func registerClicked(_ sender: UIButton) {

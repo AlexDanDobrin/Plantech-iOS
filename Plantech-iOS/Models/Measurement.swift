@@ -8,19 +8,17 @@
 import Foundation
 
 class Measurement: Decodable {
-    var timestamp: Date
+    var timestamp: String
+    var measurementID: Int
     var sensorID: Int
     var value: Double
     
-    init(timestamp: Date, sensorID: Int, value: Double) {
-        self.timestamp = timestamp
+    init(sensorID: Int, measurementID: Int, value: Double, timestamp: String) {
         self.sensorID = sensorID
+        self.measurementID = measurementID
         self.value = value
+        self.timestamp = timestamp
     }
-    
-//    init(timestamp: String, sensorID: Int, value: Double) {
-//        self.timestamp = Date(d)
-//        self.sensorID = sensorID
-//        self.value = value
-//    }
+
 }
+

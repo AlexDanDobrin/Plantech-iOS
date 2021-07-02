@@ -9,6 +9,10 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,7 +20,26 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: "registerSuccess", sender: self)
+        if let firstPassword = passwordTextField.text, let secondPassword = repeatPasswordTextField.text, let username = usernameTextField.text {
+            if firstPassword == secondPassword {
+                CallManager.shared.createUser(username: username, password: firstPassword) { [weak self] result in
+                    guard let self = self else { return }
+                    
+                    switch result {
+                    case .success(let message):
+                        let message = message
+                        print(message)
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "registerSuccess", sender: self)
+                        }
+                    case .failure(let error):
+                        print(error)
+                        
+                    }
+                }
+            }
+        }
+        
     }
     
     /*

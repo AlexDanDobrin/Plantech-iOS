@@ -11,26 +11,29 @@ class GraphViewController: UIViewController {
 
     var measurements = [Measurement]()
     
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadMeasurements()
     }
     
     // Load all the measurements
     func loadMeasurements() {
-        CallManager.shared.fetchMeasurements { [weak self] result in
+        CallManager.shared.fetchMeasurements(sensor_id: 1) { [weak self] result in
             guard let self = self else { return }
-            
+
             switch result {
             case .success(let measurements):
                 self.measurements = measurements
-                
+
                 // We update the UI asynchronous as soon as the data is loaded
                 DispatchQueue.main.async {
-                    // Whatever UI needs to be updated here
+                    for measurement in self.measurements {
+                        print("\(measurement.value) at \(measurement.timestamp)")
+                    }
                 }
                 
             case .failure(let error):

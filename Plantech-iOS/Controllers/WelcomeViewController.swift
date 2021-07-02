@@ -22,6 +22,25 @@ class WelcomeViewController: UIViewController {
         percentageImage.image = UIImage(systemName: "30.circle.fill")
         dateLabel.text = "Watered on \n\(Date().date())\nat \(Date().time())"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        CallManager.shared.fetchMeasurement(sensor_id: 1) { [weak self] result in
+            guard let self = self else { return }
+                
+            switch result {
+            case .success(let measurement):
+                DispatchQueue.main.async {
+                    self.percentageImage.image = UIImage(systemName: "\(Int(measurement.value)).circle.fill")
+                    self.dateLabel.text = "Watered on \n\(measurement.timestamp.description)"
+                }
+            case .failure(let error):
+                print(error)
+                // How do we handle error here?
+            }
+        }
+    }
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var percentageImage: UIImageView!
