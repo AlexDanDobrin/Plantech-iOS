@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		B7B4D1712684531100A20502 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D1702684531100A20502 /* Sensor.swift */; };
 		B7D7653B266E6F8200630B1D /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7653A266E6F8200630B1D /* CallManager.swift */; };
 		B7D7653F266E703A00630B1D /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7653E266E703A00630B1D /* Measurement.swift */; };
+		B7D98CA82691CA75009BA1CA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D98CA72691CA75009BA1CA /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B7B4D1702684531100A20502 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		B7D7653A266E6F8200630B1D /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		B7D7653E266E703A00630B1D /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		B7D98CA72691CA75009BA1CA /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				B7D7653A266E6F8200630B1D /* CallManager.swift */,
 				B7D7653E266E703A00630B1D /* Measurement.swift */,
 				B7B4D1702684531100A20502 /* Sensor.swift */,
+				B7D98CA72691CA75009BA1CA /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,7 +147,6 @@
 				42DE8F5FBECBEDECECF411E6 /* Pods-Plantech-iOS.debug.xcconfig */,
 				494DC77AFF992DAD1C8B6E24 /* Pods-Plantech-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -264,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B72236C6266F2B2300E8DC06 /* RegisterViewController.swift in Sources */,
+				B7D98CA82691CA75009BA1CA /* Account.swift in Sources */,
 				B7B4D1712684531100A20502 /* Sensor.swift in Sources */,
 				B7AD0D6D266E67820023541F /* OptionsViewController.swift in Sources */,
 				B7AD0D58266E643D0023541F /* WelcomeViewController.swift in Sources */,

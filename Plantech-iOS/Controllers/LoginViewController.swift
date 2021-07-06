@@ -29,12 +29,14 @@ class LoginViewController: UIViewController {
                 case .success(let message):
                     let message = message
                     print(message)
+                    Account.username = username
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "loginSuccess", sender: self)
                     }
-                case .failure(let error):
-                    print(error)
-                    
+                case .failure(_):
+                    DispatchQueue.main.async {
+                        self.showToast(controller: self, message: "Username or password incorrect!", seconds: 2.5)
+                    }
                 }
             }
         }
@@ -44,14 +46,17 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "loginToRegister", sender: self)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    func showToast(controller: UIViewController, message: String, seconds: Double) {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.view.backgroundColor = UIColor.red
+            alert.view.alpha = 0.6
+            alert.view.layer.cornerRadius = 15
+            
+            controller.present(alert, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+                alert.dismiss(animated: true)
+            }
+        }
 
 }

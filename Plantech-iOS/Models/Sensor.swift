@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+
+class Sensor: Decodable {
+    var sensorId: Int
+    var userId: Int
+    var mode: String
+    var limit: Int
+    
+    init(sensorID: Int, mode: String, limit: Int, userId: Int)  {
+        self.sensorId = sensorID
+        self.mode = mode
+        self.limit = limit
+        self.userId = userId
+    }
+
+}

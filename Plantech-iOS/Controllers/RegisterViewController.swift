@@ -32,24 +32,30 @@ class RegisterViewController: UIViewController {
                         DispatchQueue.main.async {
                             self.performSegue(withIdentifier: "registerSuccess", sender: self)
                         }
-                    case .failure(let error):
-                        print(error)
-                        
+                    case .failure(_):
+                        DispatchQueue.main.async {
+                            self.showToast(controller: self, message: "Username is taken already!", seconds: 2.5)
+                        }
                     }
                 }
+            } else {
+                showToast(controller: self, message: "Passwords don't match", seconds: 2.5)
             }
         }
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    func showToast(controller: UIViewController, message: String, seconds: Double) {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.view.backgroundColor = UIColor.red
+            alert.view.alpha = 0.6
+            alert.view.layer.cornerRadius = 15
+            
+            controller.present(alert, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+                alert.dismiss(animated: true)
+            }
+        }
 
 }
