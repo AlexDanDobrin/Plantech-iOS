@@ -22,7 +22,6 @@ class WelcomeViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         sensorList.dataSource = self
         sensorList.delegate = self
         
-        sensorList.reloadAllComponents()
         
         noDataLabel.text = "Sensor has not measured any values"
         noDataLabel.numberOfLines = 1
@@ -62,6 +61,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                         noSensorLabel.centerYAnchor.constraint(equalTo: (self?.view.centerYAnchor)!).isActive = true
                         noSensorLabel.centerXAnchor.constraint(equalTo: (self?.view.centerXAnchor)!).isActive = true
                     } else {
+                        self?.sensorList.reloadAllComponents()
                         self?.mainView.isHidden = false
                         if let id = Int(Account.sensors.first ?? "") {
                             self?.updateUI(for: id)

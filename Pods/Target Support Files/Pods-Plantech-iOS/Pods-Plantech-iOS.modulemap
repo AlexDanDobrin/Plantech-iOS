@@ -1,0 +1,6 @@
+framework module Pods_Plantech_iOS {
+  umbrella header "Pods-Plantech-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
